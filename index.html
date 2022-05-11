@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div id="container">
+    <form id="formContainer">
+      <span id="xPosition">X</span>
+      <input id="xInput" type="number" min="0" max="10" value="0">
+      <span id="yPosition">Y</span>
+      <input id="yInput" type="number" min="0" max="10" value="0">
+      <span id="directionSelection">Direction</span>
+      <select id="directionOptions">
+        <option value="North">North</Option>
+        <option value="East">East</Option>
+        <option value="South">South</Option>
+        <option value="West">West</Option>
+      </select>
+      <button id="okBtn" type="button" onclick="OkClickHandler()" id="okButton">OK</button>
+      <button id="cancelBtn" type="button" onclick="CancelClickHandler()" id="okButton">Cancel</button>
+    </form>
+
+    <div id="buttonContainer">
+      <button id="moveBtn" type="Move" onclick="MoveFun()">MOVE</button>
+      <button id="leftBtn" type="Left" onclick="RotateLeftFun()">LEFT</button>
+      <button id="rightBtn" type="Right" onclick="RotateRightFun()">RIGHT</button>
+      <button id="fireBtn" type="Fire" onclick="attackFun()">ATTACK</button>
+      <button id="reportBtn" type="Report" onclick="ReportFun()">REPORT</button>
+      <button id="placeBtn" type="Place" onclick="placeFun()">PLACE</button>
+    </div>
+    <p id="PlaceId" style="text-align: center;">Press PLACE button to start drone</p>
+    <canvas id="gameStart" width=300 height=300></canvas>
+
+  </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
